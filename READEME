@@ -1,0 +1,5 @@
+Чтобы запустить проект 
+установите все зависимости с req.txt
+pip install -r req.txt
+Запуск проекта
+docker-compose up
