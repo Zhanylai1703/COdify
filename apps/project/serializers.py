@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from .models import Establishments, Category, QA
+
+from apps.project.models import Establishments, Category, QA
 
 
 class EstablishmentsSerializer(serializers.ModelSerializer):
@@ -29,6 +30,7 @@ class CategorySerializer(serializers.ModelSerializer):
             return None
         serializer = self.__class__(obj.get_children(), many=True)
         return serializer.data
+
 
 class QASerializer(serializers.ModelSerializer):
     class Meta:

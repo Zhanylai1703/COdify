@@ -1,8 +1,10 @@
 from django.core.mail import send_mail
+
 from rest_framework import generics
 from rest_framework.response import Response
-from .models import Form, FormHistory
-from .serializers import FormSerializer, FormHistorySerializer
+
+from apps.form.models import Form, FormHistory
+from apps.form.serializers import FormSerializer, FormHistorySerializer
 
 
 class FormCreateView(generics.CreateAPIView):

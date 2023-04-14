@@ -1,14 +1,18 @@
 from django.shortcuts import render
+
 from rest_framework import viewsets
-from .models import Establishments, Category, QA
 
-from .serializers import EstablishmentsSerializer, CategorySerializer, QASerializer
+from apps.project.models import Establishments, Category, QA
+from apps.project.serializers import (EstablishmentsSerializer, 
+                                      CategorySerializer, 
+                                      QASerializer
+                                      )
 
-# Create your views here.
 
 class EstablishmentsViewSet(viewsets.ModelViewSet):
     queryset = Establishments.objects.all()
     serializer_class = EstablishmentsSerializer
+
 
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()

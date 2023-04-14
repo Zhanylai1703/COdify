@@ -1,9 +1,9 @@
-from django.urls import include, path
-
-
 from rest_framework.routers import DefaultRouter
-from .views import EstablishmentsViewSet, CategoryViewSet, QAViewSet
 
+from apps.project.views import (EstablishmentsViewSet, 
+                                CategoryViewSet, 
+                                QAViewSet
+                                )
 
 router = DefaultRouter()
 

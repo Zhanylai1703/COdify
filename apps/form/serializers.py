@@ -1,5 +1,7 @@
 from rest_framework import serializers
+
 from .models import Form, FormHistory
+
 
 class FormSerializer(serializers.ModelSerializer):
     class Meta:
@@ -13,6 +15,7 @@ class FormSerializer(serializers.ModelSerializer):
             'data_time',
         )
 
+
 class FormHistorySerializer(serializers.ModelSerializer):
     class Meta:
         model = FormHistory
@@ -21,7 +24,4 @@ class FormHistorySerializer(serializers.ModelSerializer):
             'form',
             'sent_time',
             'establishments',
-            
-
-
         )
